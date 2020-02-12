@@ -1,0 +1,112 @@
+body {
+    background: #131720;
+    color: #fefefe;
+    font: 300 1.625em/1.5 'Source Sans Pro', sans-serif;
+    letter-spacing: 0.05em;
+    text-align: center;
+    padding: 2.5em 0 0;
+  }
+  
+  kbd {
+    font: inherit;
+  }
+  
+  .title {
+    font-weight: 300;
+    letter-spacing: 0;
+    margin: 0.5em 0 0;
+  }
+  
+  .color-label {
+    padding-left: 1em;
+  }
+  
+  #rotate {
+    background: transparent;
+    border: 0;
+    font: inherit;
+    margin-bottom: 2em;
+    text-align: right;
+    width: 2.5em;
+    /*
+        Spinner input styling in Chrome
+        https://css-tricks.com/snippets/css/turn-off-number-input-spinners/#comment-534949
+    */
+  }
+  #rotate:focus {
+    outline: 1px solid;
+  }
+  #rotate::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    cursor: pointer;
+    margin-right: 8px;
+    position: relative;
+    width: 16px;
+  }
+  #rotate::-webkit-inner-spin-button::before, #rotate::-webkit-inner-spin-button::after {
+    content: "^";
+    font-family: monospace;
+    position: absolute;
+    right: 0;
+  }
+  #rotate::-webkit-inner-spin-button::before {
+    top: 0;
+  }
+  #rotate::-webkit-inner-spin-button::after {
+    right: 1px;
+    bottom: 0;
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  
+  .palette {
+    margin: 0em auto;
+    padding-bottom: 3em;
+    overflow: hidden;
+    max-width: 100%;
+    width: 30em;
+  }
+  
+  .single {
+    float: left;
+    overflow: hidden;
+    width: 33%;
+  }
+  
+  .hex {
+    display: block;
+    font-size: 1em;
+    margin-left: 1em;
+  }
+  
+  [id^=color] {
+    border-radius: 100%;
+    box-sizing: border-box;
+    margin: 0.5em;
+    margin-left: 2em;
+    position: relative;
+    width: 6.5em;
+    height: 6.5em;
+  }
+  
+  .instructions {
+    margin-top: 2em;
+    margin: 1em;
+    font-size: 0.5em;
+    
+  }
+
+  .instructions a{
+    color: #fefefe;
+  }
+  
+  body.lightBackground {
+    background: #fcfcfc;
+    color: #131720;
+    font-weight: 400;
+  }
+  
+  .lightBackground .title {
+    font-weight: 400;
+  }
+  

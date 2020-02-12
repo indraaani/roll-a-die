@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Roll-A-Die</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app">
+        <h1>Here's an idea</h1>
+        <p>(Pick one or more colors from each section, or reload to re-roll)</p>
+        <div class="palette">
+            <div>
+                <h2>Dye your resin with</h2>
+            </div>
+            <div class="single">
+                <div v-bind:style="{ backgroundColor: colors[0]}" id="color1"></div>
+                <div class="hex">{{ colorNames[0] }}</div>
+            </div>
+            <div class="single">
+                <div v-bind:style="{ backgroundColor: colors[1]}" id="color2"></div>
+                <div class="hex">{{ colorNames[1] }}</div>
+            </div>
+            <div class="single">
+                <div v-bind:style="{ backgroundColor: colors[2]}" id="color3"></div>
+                <div class="hex">{{ colorNames[2] }}</div>
+            </div>
+        </div>
+        <div class="palette">
+            <div>
+                <h2>then put {{ randomInclusion}} in there</h2>
+            </div>
+            <div class="single">
+                <div v-bind:style="{ backgroundColor: colors[3]}" id="color4"></div>
+                <div class="hex">{{ colorNames[3] }}</div>
+            </div>
+            <div class="single">
+                <div v-bind:style="{ backgroundColor: colors[4]}" id="color5"></div>
+                <div class="hex">{{ colorNames[4] }}</div>
+            </div>
+            <div class="single">
+                <div v-bind:style="{ backgroundColor: colors[5]}" id="color6"></div>
+                <div class="hex">{{ colorNames[5] }}</div>
+            </div>
+        </div>
+        <div class="palette">
+            <div>
+                <h2>and finally, ink it with</h2>
+            </div>
+            <div class="single">
+                <div v-bind:style="{ backgroundColor: colors[6]}" id="color7"></div>
+                <div class="hex">{{ colorNames[6] }}</div>
+            </div>
+            <div class="single">
+                <div v-bind:style="{ backgroundColor: colors[7]}" id="color8"></div>
+                <div class="hex">{{ colorNames[7] }}</div>
+            </div>
+            <div class="single">
+                <div v-bind:style="{ backgroundColor: colors[8]}" id="color9"></div>
+                <div class="hex">{{ colorNames[8] }}</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/color-scheme/1.0.1/color-scheme.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ntc@0.0.1/ntc.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+<p class="instructions">made possible with the help of <a href="https://codepen.io/giana/pen/BoWoQR">giana's codepen</a>,
+        colors generated using <a href="https://github.com/c0bra/color-scheme-js">color-scheme-js</a>
+        and color names generated using <a href="http://chir.ag/projects/ntc/">ntc.js</a></p>
+
+</html>
